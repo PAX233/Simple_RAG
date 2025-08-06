@@ -5,7 +5,7 @@ from langchain.chains import RetrievalQA
 
 
 if __name__ == "__main__":
-    # data_process.data_process() # 处理数据
+    data_process.data_process() # 处理数据
 
     db = data_process.data_load()
     print("数据库已加载")

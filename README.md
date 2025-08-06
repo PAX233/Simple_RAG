@@ -1,6 +1,6 @@
-数据集下载： https://aistudio.baidu.com/datasetdetail/190121/0
-model, base_url, api_key 均储存在config.py中
-在data_process.py中处理数据, 目前限制只处理前10个文件
+- 数据集下载： https://aistudio.baidu.com/datasetdetail/190121/0
+- model, base_url, api_key 均储存在config.py中
+- 在data_process.py中处理数据, 目前限制只处理前10个文件
 
 ```
 # 输出示例

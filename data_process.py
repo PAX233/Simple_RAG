@@ -15,11 +15,11 @@ def process_news_data(data_dir = config.DATA_DIR):
 
     # 解压数据集
     data_folder = os.path.join(file_dir, "unzipped_data")
-    # if not os.path.exists(data_folder):
-    #     os.makedirs(data_folder)
-    # with zipfile.ZipFile(zip_path, "r") as zip_ref:
-    #     zip_ref.extractall(data_folder)
-    # print("解压数据集完成")
+    if not os.path.exists(data_folder):
+        os.makedirs(data_folder)
+    with zipfile.ZipFile(zip_path, "r") as zip_ref:
+        zip_ref.extractall(data_folder)
+    print("解压数据集完成")
 
         
     # 处理数据集,添加日期前缀
@@ -36,7 +36,7 @@ def process_news_data(data_dir = config.DATA_DIR):
             print(f"{cnt} {file}")
 
             cnt += 1
-            if(cnt>=10): # 限制rag大小
+            if(cnt>=10): # 限制数据库大小，只处理前10个文件
                 return data_final
 
             if file.endswith(".txt"):
